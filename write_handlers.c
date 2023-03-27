@@ -27,7 +27,7 @@ int handle_write_char(char c, char buffer[],
 
 	if (width > 1)
 	{
-		buffer[BUFF_SIZE] - 1 '\0';
+		buffer[BUFF_SIZE - 1] = '\0';
 		for (i = 0; i < width - 1; i++)
 			buffer[BUFF_SIZE - i - 2] = padd;
 
