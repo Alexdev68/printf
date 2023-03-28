@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_unsigned - Prints an unsigned int
- * @types: List of arguments
- * @buffer: Buffer array
- * @flags: Flags calculator
- * @width: Get width
- * @precision: Precision spec
- * @size: Size specifier
- * Return: Number of char
+ * print_unsigned - This function prints out an unsigned integer
+ * @types: This is the list of arguments
+ * @buffer: This is the buffer array
+ * @flags: This is the active flags calculator
+ * @width: This find the width
+ * @precision: This is the precision specifier
+ * @size: This is the size specifier
+ * Return: This returns the number of characters printed out
  */
 int print_unsigned(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
@@ -33,14 +33,14 @@ int print_unsigned(va_list types, char buffer[],
 }
 
 /**
- * print_octal - Prints an unsigned number in octal notation
- * @types: List of arg
- * @buffer: Buffer array
- * @flags: Flags calculator
- * @width: Get width
- * @precision: Precision spec
- * @size: Size specifier
- * Return: Number of chars
+ * print_octal - This function prints out an unsigned number in octal notation
+ * @types: This is the list of arg
+ * @buffer: This is the buffer array
+ * @flags: This is the active flags calculator
+ * @width: This finds the width
+ * @precision: This is the precision specifier
+ * @size: This is the size specifier
+ * Return: This returns the number of characters printed out
  */
 int print_octal(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
@@ -71,14 +71,14 @@ int print_octal(va_list types, char buffer[],
 }
 
 /**
- * print_hexadecimal - Prints an unsigned number in hexadecimal
- * @types: Lists of arguments
- * @buffer: Buffer array
- * @flags: Flags calculator
- * @width: Get width
- * @precision: Precision spec
- * @size: Size specifier
- * Return: Number of chars
+ * print_hexadecimal - This function prints an unsigned number in hexadecimal
+ * @types: This is the lists of arguments
+ * @buffer: This is the buffer array
+ * @flags: This is the active flags calculator
+ * @width: This finds the width
+ * @precision: This is the precision specifier
+ * @size: This is the size specifier
+ * Return: This returns the number of characters printed out
  */
 int print_hexadecimal(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
@@ -88,14 +88,14 @@ int print_hexadecimal(va_list types, char buffer[],
 }
 
 /**
- * print_hexa_upper - Prints an unsigned number in upper hexadecimal
- * @types: Liss of arguments
- * @buffer: Buffer array
- * @flags: Flags calculator
- * @width: Get width
- * @precision: Precision spec
- * @size: Size specifier
- * Return: Number of chars
+ * print_hexa_upper - This prints an unsigned number in upper hexadecimal
+ * @types: This is the list of arguments
+ * @buffer: This is the buffer array
+ * @flags: This is the active flags calculator
+ * @width: This finds the width
+ * @precision: This is the precision specifier
+ * @size: This is the size specifier
+ * Return: This returns the number of characters printed out
  */
 int print_hexa_upper(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
@@ -105,17 +105,16 @@ int print_hexa_upper(va_list types, char buffer[],
 }
 
 /**
- * print_hexa - Prints a hexadecimal number in lower or upper
- * @types: List of arguments
- * @map_to: Array of vaalues to map
- * @buffer: Buffer array
- * @flags: Flags calculator
- * @flag_ch: Calculates active flags
- * @width: Get width
- * @precision: Precision spec
- * @size: Size specifier
- * @size: Size specification
- * Return: Number of chars
+ * print_hexa - This function prints an hexadecimal number in lower or upper
+ * @types: This is the list of arguments
+ * @map_to: This is an array of values to map
+ * @buffer: This is the buffer array
+ * @flags: This is the active flags calculator
+ * @flag_ch: This calculates active flags characters
+ * @width: This finds the width
+ * @precision: This is the precision specifier
+ * @size: This is the size specifier
+ * Return: This returns the number of characters printed out
  */
 int print_hexa(va_list types, char map_to[], char buffer[],
 		int flags, char flag_ch, int width, int precision, int size)

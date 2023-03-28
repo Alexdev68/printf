@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * is_printable - Checks if a char is printable
- * @c: Char to check
- * Return: 1 if c is printable, if not 0
+ * is_printable - This function checks if a character is printable or not
+ * @c: This the character to be checked
+ * Return: This returns 1 if the character is printable or 0 if not
  */
 int is_printable(char c)
 {
@@ -14,11 +14,11 @@ int is_printable(char c)
 }
 
 /**
- * append_hexa_code - Append ascii in hexadecimal code
- * @buffer: Array of chars
- * @i: Index to start
- * @ascii_code: ASCII Code
- * Return: 3 Always
+ * append_hexa_code - This function appends ascii in hexadecimal code
+ * @buffer: This is the buffer array of characters
+ * @i: This is the index to start iteration
+ * @ascii_code: This is the ASCII Code
+ * Return: This returns 3 Always
  */
 int append_hexa_code(char ascii_code, char buffer[], int i)
 {
@@ -37,9 +37,9 @@ int append_hexa_code(char ascii_code, char buffer[], int i)
 }
 
 /**
- * is_digit - Verify if a char is a digit
- * @c: Char to verify
- * Return: 1 if c is a digit, 0 if not
+ * is_digit - This checks if a character is a digit
+ * @c: This is the character to be checked
+ * Return: This returns 1 if the character is a digit or 0 if not
  */
 int is_digit(char c)
 {
@@ -50,10 +50,10 @@ int is_digit(char c)
 }
 
 /**
- * convert_size_number - Cast a number to the specified size
- * @num: Number to cast
- * @size: Number indicating type to cast
- * Return: Casted value of number
+ * convert_size_number - This function casts a number to the specified size
+ * @num: This is the number to cast
+ * @size: This is the number indicating the type to cast
+ * Return: This returns the casted value of the number
  */
 long int convert_size_number(long int num, int size)
 {
@@ -66,10 +66,10 @@ long int convert_size_number(long int num, int size)
 }
 
 /**
- * convert_size_unsgnd - Cast a number to specified size
- * @num: Number to cast
- * @size: Number indicating type to cast
- * Return: Casted value of number
+ * convert_size_unsgnd - This function cast a number to the specified size
+ * @num: This is the number to cast
+ * @size: This is the number indicating the type to cast
+ * Return: This returns the casted value of a number
  */
 long int convert_size_unsgnd(unsigned long int num, int size)
 {
