@@ -50,7 +50,7 @@ int print_pointer(va_list types, char buffer[],
 }
 
 /**
- * print_non_printable - This function prints ASCII codes in hexa of non printable chars
+ * print_non_printable - This prints ASCII codes in hexa of non printable chars
  * @types: This is the list of arguments
  * @buffer: This is the buffer array
  * @flags: This is the inactive flags calculator

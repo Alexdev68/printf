@@ -17,7 +17,7 @@
 #define S_SHORT 1
 
 /**
- * struct specs - This is a Struct 
+ * struct spec - This is a Struct
  * @spec: This is the format
  * @func: This is for the  functions associated
  */
