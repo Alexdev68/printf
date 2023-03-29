@@ -3,13 +3,13 @@
 void print_buffer(char buffer[], int *buff_ind);
 
 /**
- * _printf - This a printf function
- * @format: This is the format
+ * _printf - This a function that works like the printf function
+ * @format: This is the format character string
  * Return: This returns printed char
  */
 int _printf(const char *format, ...)
 {
-	int i, printed = 0, printed_chars = 0;
+	int i, outputted = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
@@ -32,16 +32,16 @@ int _printf(const char *format, ...)
 		else
 		{
 			print_buffer(buffer, &buff_ind);
-			flags = get_flags(format, &i);
-			width = get_width(format, &i, list);
-			precision = get_precision(format, &i, list);
-			size = get_size(format, &i);
+			flags = find_flags(format, &i);
+			width = find_width(format, &i, list);
+			precision = find_precision(format, &i, list);
+			size = find_size(format, &i);
 			++i;
-			printed = handle_print(format, &i, list, buffer,
+			outputted = handle_output(format, &i, list, buffer,
 					flags, width, precision, size);
-			if (printed == -1)
+			if (outputted == -1)
 				return (-1);
-			printed_chars += printed;
+			printed_chars += outputted;
 		}
 	}
 	print_buffer(buffer, &buff_ind);
