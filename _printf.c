@@ -1,62 +1,34 @@
 #include "main.h"
 
-void print_buffer(char buffer[], int *buff_ind);
-
 /**
- * _printf - This a function that works like the printf function
- * @format: This is the format character string
- * Return: This returns printed char
+ * _printf - This works like a printf function
+ * @format: This is a character string
+ * Return: This returns 0;
  */
 int _printf(const char *format, ...)
 {
-	int i, outputted = 0, printed_chars = 0;
-	int flags, width, precision, size, buff_ind = 0;
-	va_list list;
-	char buffer[BUFF_SIZE];
+	va_list data;
+	int i = 0;
+	int count = 0;
+	char spec;
 
-	if (format == NULL)
-		return (-1);
+	va_start(data, format);
 
-	va_start(list, format);
-
-	for (i = 0; format && format[i] != '\0'; i++)
+	while (format[i])
 	{
-		if (format[i] != '%')
+		if (format[i] == '%')
 		{
-			buffer[buff_ind++] = format[i];
-			if (buff_ind == BUFF_SIZE)
-				print_buffer(buffer, &buff_ind);
-
-			printed_chars++;
+			spec = format[i + 1];
+			count += get_sp_func(&spec)(data);
+			i += 2;
 		}
 		else
 		{
-			print_buffer(buffer, &buff_ind);
-			flags = find_flags(format, &i);
-			width = find_width(format, &i, list);
-			precision = find_precision(format, &i, list);
-			size = find_size(format, &i);
-			++i;
-			outputted = handle_output(format, &i, list, buffer,
-					flags, width, precision, size);
-			if (outputted == -1)
-				return (-1);
-			printed_chars += outputted;
+			_putchar(format[i]);
+			i++;
+			count++;
 		}
 	}
-	print_buffer(buffer, &buff_ind);
-	va_end(list);
-	return (printed_chars);
-}
-
-/**
- * print_buffer - This prints the contents of a buffer if they exist
- * @buffer: This is an array of chars
- * @buff_ind: This is the index to add the next char, length
- */
-void print_buffer(char buffer[], int *buff_ind)
-{
-	if (*buff_ind > 0)
-		write(1, &buffer[0], *buff_ind);
-	*buff_ind = 0;
+	va_end(data);
+	return (count);
 }
