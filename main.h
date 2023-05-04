@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include "main.h"
 
 /**
  * struct op - This struct is used for function linking
