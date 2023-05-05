@@ -3,7 +3,7 @@
 /**
  * _printf - This works like a printf function
  * @format: This is a character string
- * Return: This returns 0;
+ * Return: This returns the number of characters printed out or -1 if it fails;
  */
 int _printf(const char *format, ...)
 {
@@ -13,6 +13,11 @@ int _printf(const char *format, ...)
 	char spec;
 
 	va_start(data, format);
+
+	if (!format)
+	{
+		return (-1);
+	}
 
 	while (format[i])
 	{

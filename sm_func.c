@@ -11,3 +11,26 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+/**
+ * _puts - This function prints a string
+ * @str: This is the string passed into the function
+ * Return: This returns 0
+ */
+int _puts(char *str)
+{
+	int i, len;
+
+	if (str == NULL)
+	{
+		return (-1);
+	}
+
+	len = strlen(str);
+
+	for (i = 0; i < len; i++)
+	{
+		_putchar(str[i]);
+	}
+	return (0);
+}
