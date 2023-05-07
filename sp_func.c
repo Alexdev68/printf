@@ -10,12 +10,11 @@ int print_int(va_list data)
 	int num = va_arg(data, int);
 	int k;
 	char no[1024];
-	int len = 0, zero = 0;
+	int len = 0;
 	int count = 0, sign;
-
 	if (num == 0)
 	{
-		_putchar(zero + '0');
+		_putchar(0 + '0');
 	}
 
 	if (num < 0)
@@ -35,7 +34,7 @@ int print_int(va_list data)
 
 	if (sign == 1)
 	{
-		_putchar('-');
+		_putchar(- + '0');
 		count++;
 	}
 	for (k = len - 1; k >= 0; k--)
