@@ -32,7 +32,7 @@ int print_int(va_list data)
 	}
 	no[k] = '\0';
 
-	if (sign)
+	if (sign == 1)
 	{
 		_putchar('-');
 		count++;
